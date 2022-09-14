@@ -3,7 +3,6 @@ import {KeyboardAvoidingView,View,Text,TouchableOpacity} from 'react-native';
 import { AppRegistry ,StatusBar} from 'react-native';
 import styles from '../../styles/Style';
 import { serviceVerifyToken } from '../../services/auth/Auth';
-import { signInWithBrowser,getAccessToken, EventEmitter, createConfig} from '@okta/okta-react-native';
 
 
 import AppContext from '../../contexts/AppContext';
@@ -15,25 +14,6 @@ export default function LoginScreen(props) {
     useEffect(() => {        
         
     }, []);
-    
-    verifyToken = () => {
-        serviceVerifyToken((res) => {
-            if (res.isFirstLogin) {
-                props.navigation.navigate('Register');
-            }
-            else {
-                appContext.setSignIn(true);
-            }
-        })        
-    }
-
-    actionLogin = () => {    
-        signInWithBrowser()
-        .then(res => {
-            console.log(res);
-            verifyToken();
-        });
-    }
 
     return (
       <KeyboardAvoidingView style={[styles.primaryFullBG,{alignItems:'center'}]}>
@@ -42,7 +22,7 @@ export default function LoginScreen(props) {
             <View style={[styles.flexView, styles.marginNormal]}>
                 
             </View>
-            <TouchableOpacity style={{marginTop:20}} onPress={() => actionLogin()}>
+            <TouchableOpacity style={{marginTop:20}}>
                 <View style={[styles.primaryBtn]}>
                     <Text style={[styles.btnText]}>Login</Text>
                 </View>

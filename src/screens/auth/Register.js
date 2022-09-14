@@ -5,7 +5,6 @@ import { AppRegistry ,StatusBar} from 'react-native';
 import {serviceUpdateUser} from '../../services/user/User'
 import styles from '../../styles/Style';
 import AppContext from '../../contexts/AppContext';
-import { getAccessToken } from '@okta/okta-react-native';
 
 export default function RegisterScreen(props) {    
     const appContext = useContext(AppContext);
