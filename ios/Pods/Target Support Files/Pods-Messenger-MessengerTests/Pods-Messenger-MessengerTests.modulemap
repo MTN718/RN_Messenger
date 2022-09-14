@@ -1,0 +1,6 @@
+module Pods_Messenger_MessengerTests {
+  umbrella header "Pods-Messenger-MessengerTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
