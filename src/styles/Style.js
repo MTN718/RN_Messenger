@@ -4,40 +4,46 @@ import
 } from 'react-native';
 
 export default StyleSheet.create({
-  mainContainer: {
+  primaryFullBG: {
     width:'100%',
     height: '100%',
-    paddingLeft:20,
-    paddingRight:20,
-    paddingBottom:50
-  },
-  flexView: {
-    flex:1,
-  },
-  marginNormal: {
-    marginTop: 300
-  },
+    backgroundColor: '#005070'
+  },  
   primaryBtn: {
-    backgroundColor: '#231352',
+    backgroundColor: '#ff69b9',
     padding: 20,
-    borderRadius: 20,
-    
+    borderRadius: 40,
   },
   btnText: {
     textAlign: 'center',
     fontWeight: '800',
     color: '#fff'
   },
-  inputLabel: {
-    marginBottom:5
+  welcomeTitle: {
+    textAlign: 'center',
+    fontSize: 22,
+    fontWeight: '800',
+    color: '#fff'
   },
-  inputView: {
+  welcomeText: {
+    marginLeft: 20, 
+    marginRight: 20,
+    textAlign: 'center',
+    marginTop: 20,
+    fontSize: 18,
+    color: '#fff'
+  },
+  unlockInput: {
+    paddingTop: 30,
+    paddingBottom: 30,
     paddingLeft: 20,
     paddingRight: 20,
-    borderWidth: 1,
-    borderColor: '#123498',
+    marginTop: 20,
+    marginLeft: 20,
+    alignContent: 'center',
+    marginRight: 20,
+    height: 120,
     backgroundColor: '#fff',
-    borderRadius: 10,
-    height: 40
+    borderRadius: 30
   }
 });
