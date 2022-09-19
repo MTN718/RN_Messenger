@@ -9,6 +9,11 @@ export default StyleSheet.create({
     height: '100%',
     backgroundColor: '#005070'
   },  
+  whiteBG: {
+    width:'100%',
+    height: '100%',
+    backgroundColor: '#fff'
+  }, 
   primaryBtn: {
     backgroundColor: '#ff69b9',
     padding: 20,
@@ -45,5 +50,26 @@ export default StyleSheet.create({
     height: 120,
     backgroundColor: '#fff',
     borderRadius: 30
+  },
+  profileImg: {
+    width: 120,
+    height: 120,
+    borderRadius: 60
+  },
+  profileItem: {
+    marginLeft: 16,
+    marginRight: 16,
+    marginTop: 16
+  },
+  profileField: {
+    fontSize: 14,
+    color: '#000',
+    lineHeight: 30,
+  },
+  profileValue: {
+    lineHeight: 30,
+    color: '#15607D',
+    fontSize: 16,
+    fontWeight: '600'
   }
 });
