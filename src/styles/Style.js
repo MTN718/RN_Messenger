@@ -71,5 +71,13 @@ export default StyleSheet.create({
     color: '#15607D',
     fontSize: 16,
     fontWeight: '600'
+  },
+  sectionHeaderContainer: {
+    height: 32,
+    paddingLeft: 16,
+    justifyContent: 'center'
+  },
+  sectionHeaderLabel: {
+    fontSize: 16
   }
 });

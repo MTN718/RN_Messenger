@@ -7,19 +7,23 @@ import HomeScreen from '../../screens/Home';
 import ContactScreen from '../../screens/Contact';
 import ProfileScreen from '../../screens/Profile';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import Header from '../../components/header/Header';
 
 const Tab = createBottomTabNavigator();
 
 export default function HomeStack() {
+  const onSearch = () => {
+
+  }
+
   return (
     <Tab.Navigator>
         <Tab.Screen name="Home" component={HomeScreen} 
           options={{
             title: 'Messenger',  
-            headerTintColor: '#fff',
-            headerStyle: {
-              backgroundColor: '#005070'
-            },
+            header: (props) => (
+              <Header title="Messenger"/>
+            ),            
             tabBarLabel: ({focused, color, size}) => (
               <Text style={{fontSize: 12, color: focused ? '#ff69b9' : '#9baeb5'}}>Chats</Text>
             ),
@@ -31,10 +35,9 @@ export default function HomeStack() {
         <Tab.Screen name="Contact" component={ContactScreen}         
           options={{
             title: 'Contact',  
-            headerTintColor: '#fff',
-            headerStyle: {
-              backgroundColor: '#005070'
-            },
+            header: (props) => (
+              <Header title="Contact"/>
+            ),            
             tabBarLabel: ({focused, color, size}) => (
               <Text style={{fontSize: 12, color: focused ? '#ff69b9' : '#9baeb5'}}>Contacts</Text>
             ),
@@ -46,10 +49,9 @@ export default function HomeStack() {
         <Tab.Screen name="Profile" component={ProfileScreen} 
           options={{
             title: 'Profile',  
-            headerTintColor: '#fff',
-            headerStyle: {
-              backgroundColor: '#005070'
-            },
+            header: (props) => (
+              <Header title="Profile" hasSearch={false}/>
+            ),            
             tabBarLabel: ({focused, color, size}) => (
               <Text style={{fontSize: 12, color: focused ? '#ff69b9' : '#9baeb5'}}>Profile</Text>
             ),

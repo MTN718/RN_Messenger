@@ -7,7 +7,7 @@ import AppContext from '../contexts/AppContext';
 import ContactItem from '../components/contact/ContactItem'
 import HomeItem from '../components/contact/HomeItem';
 
-export default function HomeScreen(props) {    
+export default function ChatScreen(props) {    
     const appContext = useContext(AppContext);
     const DATA = [
         {
@@ -61,11 +61,7 @@ export default function HomeScreen(props) {
     }
     return (
       <View style={[styles.whiteBG]}>
-        <FlatList
-            data={DATA}
-            renderItem={(item) => renderContact(item)}
-            keyExtractor={item => item.id}
-        />                 
+        
       </View>
     );
 }
